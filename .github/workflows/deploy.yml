@@ -17,8 +17,8 @@ jobs:
           aws-region: ap-northeast-1
 
       - name: Trigger deploy
-        uses: actions/aws/kubectl@master
+        uses: kodermax/kubectl-aws-eks@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: -n np-apps run nginx --image=nginx 
+            args: -n np-apps run nginx --image=nginx 
