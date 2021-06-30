@@ -21,4 +21,4 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-            args: -n np-apps run nginx --image=nginx 
+            args: -n np-apps set image pod/nginx nginx=nginx:1.19 
