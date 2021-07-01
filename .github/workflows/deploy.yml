@@ -21,7 +21,7 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA_QA }}
         with:
-            args: -n np-apps set image deployment/nginx-deployment nginx=nginx:1.19
+            args: -n np-apps set image deployment/nginx-deployment nginx=nginx:1.
             
       - name: Verify deployment
         uses: kodermax/kubectl-aws-eks@master
